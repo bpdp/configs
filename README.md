@@ -4,8 +4,8 @@ Some configuration files from my $HOME. Every software configuration will reside
 
 ## gitconfig
 
-'''
+```
 $HOME/.gitconfig
 $LOCALREPO/.git/config
-'''
+```
 See the file naming pattern inside.

@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "github"]
+	url = https://github.com/bpdp/buku-cloud-nodejs.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[remote "bitbucket"]
+	url = git@bitbucket.org:bpdp/buku-cloud-nodejs.git
+	fetch = +refs/heads/*:refs/remotes/bitbucket/*

@@ -1,0 +1,125 @@
+source /etc/Muttrc.gpg.dist
+
+## Theme kindly inspired from                                                                                                                                             
+## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
+
+## Colours for items in the index                                                                                                                                         
+color index brightcyan black ~N
+color index brightred black ~O
+color index brightyellow black ~F
+color index black green ~T
+color index brightred black ~D
+mono index bold ~N
+mono index bold ~F
+mono index bold ~T
+mono index bold ~D
+
+## Highlights inside the body of a message.                                                                                                                               
+
+## URLs                                                                                                                                                                    
+color body brightgreen black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body brightgreen black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+## Email addresses.                                                                                                                                                       
+color body brightgreen black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+## Header                                                                                                                                                                 
+color header green black "^from:"
+color header green black "^to:"
+color header green black "^cc:"
+color header green black "^date:"
+color header yellow black "^newsgroups:"
+color header yellow black "^reply-to:"
+color header brightcyan black "^subject:"
+color header red black "^x-spam-rule:"
+color header green black "^x-mailer:"
+color header yellow black "^message-id:"
+color header yellow black "^Organization:"
+color header yellow black "^Organisation:"
+color header yellow black "^User-Agent:"
+color header yellow black "^message-id: .*pine"
+color header yellow black "^X-Fnord:"
+color header yellow black "^X-WebTV-Stationery:"
+
+color header red black "^x-spam-rule:"
+color header green black "^x-mailer:"
+color header yellow black "^message-id:"
+color header yellow black "^Organization:"
+color header yellow black "^Organisation:"
+color header yellow black "^User-Agent:"
+color header yellow black "^message-id: .*pine"
+color header yellow black "^X-Fnord:"
+color header yellow black "^X-WebTV-Stationery:"
+color header yellow black "^X-Message-Flag:"
+color header yellow black "^X-Spam-Status:"
+color header yellow black "^X-SpamProbe:"
+color header red black "^X-SpamProbe: SPAM"
+
+## Coloring quoted text - coloring the first 7 levels:                                                                                                                    
+color quoted cyan black
+color quoted1 yellow black
+color quoted2 red black
+color quoted3 green black
+color quoted4 cyan black
+color quoted5 yellow black
+color quoted6 red black
+color quoted7 green black
+
+## Default color definitions                                                                                                                                              
+#color hdrdefault white green                                                                                                                                             
+color signature brightmagenta black
+color indicator black cyan
+color attachment black green
+color error red black
+color message white black
+color search brightwhite magenta
+color status brightyellow blue
+color tree brightblue black
+color normal white black
+color tilde green black
+color bold brightyellow black
+#color underline magenta black                                                                                                                                            
+color markers brightcyan black
+
+## Colour definitions when on a mono screen                                                                                                                               
+mono bold bold
+mono underline underline
+mono indicator reverse
+
+
+
+# My email address
+#set pop_user="bpdp+contextualmind.net"
+#
+# # My email account password
+#set pop_pass=""
+#
+# # Too many email headers make reading a message difficult
+ignore *
+unignore From: To: Cc: Subject: Date: #Only these are shown in the header
+#
+# #To ensure that mutt does not put
+# #'username@localhost.localdomain in From
+#set from="username@gmail.com"
+#set use_from=yes
+#set envelope_from="yes"
+#
+set from="a.out@bpdp.xyz"
+set use_from=yes
+set envelope_from="yes"
+
+set editor=vim
+
+set folder="imaps://a.out+bpdp.xyz@carina.indowebsite.net"
+set spoolfile="imaps://a.out+bpdp.xyz@carina.indowebsite.net/INBOX"
+
+set imap_pass=""
+
+set smtp_url="smtps://a.out+bpdp.xyz@carina.indowebsite.net/"
+set smtp_pass=""
+set ssl_force_tls = yes
+
+bind index 'G' imap-fetch-mail
+#set mbox="!"

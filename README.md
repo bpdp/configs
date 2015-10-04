@@ -17,3 +17,9 @@ emacs.d
 
 $HOME/.emacs.d/init.el for emacs (currently 24.0.97)
 
+muttrc
+------
+
+```
+$HOME/.muttrc
+```
